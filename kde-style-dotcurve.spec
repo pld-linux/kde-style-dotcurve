@@ -11,10 +11,10 @@ Source0:	http://webs.ono.com/usr047/uucp/%{_decoration}-%{version}.tar.bz2
 URL:		http://kde-look.org/content/show.php?content=16211
 BuildRequires:	autoconf
 BuildRequires:	automake
-Obsoletes:	kde-decoration-dotcurve
-BuildRequires:	kdelibs-devel >= 9:3.2.0
 BuildRequires:	kdebase-desktop-libs >= 9:3.2.0
+BuildRequires:	kdelibs-devel >= 9:3.2.0
 Requires:	kdebase-desktop-libs >= 9:3.2.0
+Obsoletes:	kde-decoration-dotcurve
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,12 +30,12 @@ okien "Web".
 %setup -q -n %{_decoration}-%{version}
 
 %build
-cp -f %{_datadir}/automake/config.sub admin
+cp -f /usr/share/automake/config.sub admin
 
 %configure \
-	%if "%{_lib}" == "lib64"
+%if "%{_lib}" == "lib64"
 	--enable-libsuffix=64 \
-	%endif
+%endif
 	--%{?debug:en}%{!?debug:dis}able-debug%{?debug:=full} \
 	--with-qt-libraries=%{_libdir}
 
