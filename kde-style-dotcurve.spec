@@ -6,6 +6,7 @@ Version:	0.2.1
 Release:	1
 License:	LGPL
 Group:		Themes
+#Source0Download: http://dotcurve.usefularts.org/download.html
 Source0:	http://webs.ono.com/usr047/uucp/%{_decoration}-%{version}.tar.bz2
 # Source0-md5:	fc9b655cd6689ad5055ccb781dde3848
 URL:		http://kde-look.org/content/show.php?content=16211
