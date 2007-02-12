@@ -1,6 +1,6 @@
 %define		_decoration	dotcurve
 Summary:	KDE Style - %{_decoration}
-Summary(pl):	Styl do KDE - %{_decoration}
+Summary(pl.UTF-8):   Styl do KDE - %{_decoration}
 Name:		kde-decoration-%{_decoration}
 Version:	0.2.1
 Release:	1
@@ -22,9 +22,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 A KDE style with flat widgets and rounded corners and striped
 progressbar. 
 
-%description -l pl
-Ostre naro¿niki s± martwe (prawie). Niech ¿yj± okr±g³e! Szybki,
-prosty, przejrzysty wygl±d. Zaleca siê u¿ywanie razem z dekoracj±
+%description -l pl.UTF-8
+Ostre naroÅ¼niki sÄ… martwe (prawie). Niech Å¼yjÄ… okrÄ…gÅ‚e! Szybki,
+prosty, przejrzysty wyglÄ…d. Zaleca siÄ™ uÅ¼ywanie razem z dekoracjÄ…
 okien "Web".
 
 %prep
