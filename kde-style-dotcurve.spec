@@ -1,6 +1,6 @@
 %define		_decoration	dotcurve
 Summary:	KDE Style - %{_decoration}
-Summary(pl.UTF-8):   Styl do KDE - %{_decoration}
+Summary(pl.UTF-8):	Styl do KDE - %{_decoration}
 Name:		kde-decoration-%{_decoration}
 Version:	0.2.1
 Release:	1
