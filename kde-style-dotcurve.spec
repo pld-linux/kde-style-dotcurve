@@ -2,13 +2,14 @@
 Summary:	KDE Style - %{_decoration}
 Summary(pl.UTF-8):	Styl do KDE - %{_decoration}
 Name:		kde-decoration-%{_decoration}
-Version:	0.2.1
-Release:	1
+Version:	1.0
+%define _rc	rc1
+Release:	0.%{_rc}.1
 License:	LGPL
 Group:		Themes
 #Source0Download: http://dotcurve.usefularts.org/download.html
-Source0:	http://webs.ono.com/usr047/uucp/%{_decoration}-%{version}.tar.bz2
-# Source0-md5:	fc9b655cd6689ad5055ccb781dde3848
+Source0:	http://webs.ono.com/uucp/dotcurve/files/%{_decoration}-%{version}%{_rc}.tar.bz2
+# Source0-md5:	60ec9dfbc1b4cefcf02990c337591422
 URL:		http://kde-look.org/content/show.php?content=16211
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -28,7 +29,7 @@ prosty, przejrzysty wygląd. Zaleca się używanie razem z dekoracją
 okien "Web".
 
 %prep
-%setup -q -n %{_decoration}-%{version}
+%setup -q -n %{_decoration}-%{version}%{_rc}
 
 %build
 cp -f /usr/share/automake/config.sub admin
@@ -57,4 +58,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_libdir}/kde3/plugins/styles/*.la
 %attr(755,root,root) %{_libdir}/kde3/plugins/styles/*.so
+%{_libdir}/kde3/*.la
+%attr(755,root,root) %{_libdir}/kde3/*.so
 %{_datadir}/apps/kstyle/themes/*
